@@ -17,8 +17,9 @@ function fetchDogs() {
   function fetchBreeds() {
     return fetch(breedUrl)
     .then(resp => resp.json())
-    .then(json => breedList(json.message));
-  }
+    .then(json => breedList(json.message))
+    .then(json => breedList(json.message))
+}
 
   function breedList(data) {
     const dogList = document.getElementById('dog-breeds')
@@ -41,14 +42,18 @@ function changeColor(element) {
 }
 
 function filterBreeds(element) {
-    let value = element.value;  
+    const value = element.value.toLowerCase();  
     let listElements = document.querySelectorAll('li')
-    listElements.forEach(breed=>{
-        if (breed.innerText[0] != value){
-            // console.log(breed.innerText)
-             breed.style.display = "none";
-        } else {
+    listElements.forEach(breed => {
+        if (value === 'all') {
+            console.log('1')
+            breed.style.display = '';
+        } else if (breed.innerText[0].toLowerCase() == value ){
+            console.log('2')
             breed.style.display = "";
+        } else {
+            console.log('3')
+            breed.style.display = "none";
         }
     })
 }

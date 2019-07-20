@@ -70,46 +70,6 @@ function breedByLetter() {
     })
 };
 
-
-// const startsWithA = breedsLis.filter(breed => breed.charAt(0).toLowerCase() == "a");
-
-
-
-
-
-
-
-
-
-
-
-// const breedsLis = document.querySelectorAll("ul li")
-
-// const dropdown = document.querySelector("select")
-
-// const btnA = document.querySelector("select :nth-child(1)")
-
-// const b = document.querySelector("select :nth-child(2)")
-// const c = document.querySelector("select :nth-child(3)")
-// const d = document.querySelector("select :nth-child(4)")
-// const dropdownChoices = ["a", "b", "c", "d"]
-
-
-
-
-// btnA.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     const whatToSlice = startsWithA.length + 1;
-//     breedsLis.slice()
-// })
-
-
-
-
-
-
-
-
 // could ask api only items that start with whatever letter
 // could select only those that start with whatever letter between showBreeds items
 
